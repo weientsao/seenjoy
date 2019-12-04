@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font:12px "微軟正黑體",Verdana, Geneva, sans-serif;
+	line-height:24px;
+	color:#333;
+}
+h2{ color:#FFF;}
+h3{ color:#e71974; margin:0; padding:0; line-height:40px; font-size:16px;}
+h4{ color: #900; margin:0; padding:0; line-height:40px; font-size:14px;}
+
+h2 a{ color:#FFF;}
+p{ margin:0; padding:0;}
+a{ color:#333; text-decoration:none;}
+.c_line{ background:url(images/color_line.jpg) center; height:5px;}
+.top_bg{ background-color:#e71974; color:#FFF; height:42px; line-height:42px; font-weight:bold;}
+.top_bg a{ color:#FFF; text-decoration: underline;}
+.top_bg a:hover{ text-decoration:none;}
+.size{ width:1000px; margin:0 auto;}
+.right{ float:right; font-size:12px;}
+.clear{ clear:both;}
+.up .size{ height:98px;}
+.logo{ padding:10px 0 0 0;}
+.menu{ float:right;}
+.menu ul{ margin:0; padding:0;}
+.menu li{ margin:0; padding:0; list-style:none;}
+.menu li.main{ list-style:none; float:left; padding:25px 23px; font-size:16px; font-weight:bold; border-left:1px solid #ececec; height:43px; border-bottom:5px solid #9C0; text-align:center;}
+.menu li.a01{ border-bottom:5px solid #e71974;}
+.menu li.a02{ border-bottom:5px solid #849c1f;}
+.menu li.a03{ border-bottom:5px solid #658eff;}
+.menu li.a04{ border-bottom:5px solid #b53314;}
+.menu li.a05{ border-bottom:5px solid #ff7d3a;}
+.menu li.a06{ border-bottom:5px solid #e782eb;}
+.menu li.end{ border-left:1px solid #ececec; width:0px; padding:0; height:93px;}
+
+.index_text{ width:100%;}
+.index_text img{ position:absolute; z-index:1; margin-top:300px;}
+.bimg{ background:url(images/index_bimg01.jpg) center; height:1056px;}
+
+.down ul{ margin:0; padding:0;}
+.down li{ list-style:none; margin:32px 6px; float:left;}
+.down img{ border:5px solid #b49d1a; 
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+overflow:hidden;
+}
+.down img:hover{ border:5px solid #e81974; }
+.down_bg{ background:url(images/down_bg.jpg) center; height:200px;}
+.copyright{ padding:20px 0; height:70px; background-color:#e81974; color: #FFF;}
+.copyright a{ color: #FFF; text-decoration: underline;}
+.copyright a:hover{ text-decoration:none;}
+
+.fluid_container a{ width:100%; height:100%;}
+
+
+.main_bg{ background: url(images/main_bg.jpg) center; height:1056px;}
+.main_bg2{ background: url(images/main_p01.png) no-repeat left bottom; height:1056px;}
+.main_bg2-2{ background: url(images/main_p02.png) no-repeat left bottom; height:1056px;}
+.main_bg2-3{ background: url(images/main_p03.png) no-repeat left bottom; height:1056px;}
+.main_bg2-4{ background: url(images/main_p04.png) no-repeat left bottom; height:1056px;}
+.main_bg2-5{ background: url(images/main_p05.png) no-repeat left bottom; height:1056px;}
+
+.main_bg3{ background: url(images/main_img01.png) no-repeat bottom right; height:1056px;}
+.main_text{ float:right; width:780px; margin-top:173px; margin-right:20px; height:600px;}
+.main_pimg{ position:absolute; margin-top:500px;}
+
+.left_menu{ padding-top:200px; margin-left:30px;}
+.left_menu ul{ margin:0; padding:0;}
+.left_menu li{ list-style:none; background-color:#e71974; color:#FFF; width:96px; margin-bottom:5px; padding:10px 20px; font-size:16px; font-weight:bold;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+.left_menu li:hover{ background-color:#333;}
+.left_menu li.this{ background-color:#333;}
+
+.content li{ border-bottom:1px dashed #CCCCCC; padding:5px 0;}
+.btn{ text-align:center; margin-top:20px;}
+.btn input{ padding:10px 20px; font-size:16px; font-family:"微軟正黑體"; font-weight:bold; }
+
+
+
+ul li.sublinks{ }
+
+ul li.sublinks a
+{
+  color:#000000;
+  background:#FFF;
+  border-bottom:1px solid #cccccc;
+  font-weight:normal;
+  text-decoration:none;
+  display:block;
+  width:93px;
+  text-align:center;
+  padding:5px 10px;
+  font-size:15px;
+}
+
+ul li.sublinks a:hover
+{
+  color:#FFF;
+  background:#e71974;
+}
+
+ul li.sublinks
+{
+	display:none;
+}
+
+/* CSS For Dropdown Menu End */
+
+
+
+#container
+{
+  margin:0px auto;
+  width:570px;
+}
+
+.clear
+{
+  clear:both;
+}
+
+.left
+{
+  float:left;
+}
+
+.right
+{
+  float:right;
+}
