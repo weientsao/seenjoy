@@ -13,6 +13,17 @@
     ///////////////////////////////////////////////////////////////////////////////////////////////////--> 
     <link rel='stylesheet' id='camera-css'  href='../css/camera.css' type='text/css' media='all'> 
     <style>
+		html,body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			color: #09f;
+		}
+		a:hover {
+			text-decoration: none;
+		}
 		#back_to_camera {
 			background: rgba(255,255,255,.9);
 			clear: both;
@@ -74,10 +85,10 @@
 		jQuery(function(){
 			
 			jQuery('#camera_wrap_4').camera({
-				height: '1056',
+				height: 'auto',
 				loader: 'bar',
 				pagination: false,
-				thumbnails: false,
+				thumbnails: true,
 				hover: false,
 				opacityOnGrid: false,
 				imagePath: '../images/'
@@ -88,13 +99,27 @@
  
 </head>
 <body>
+	<div id="back_to_camera">
+    	<a href="http://www.pixedelic.com/plugins/camera/">&larr; Back to the Camera project</a>
+    </div><!-- #back_to_camera -->
+    
 	<div class="fluid_container">
         <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
-            <div data-thumb="../../images/index_bimg01.jpg" data-src="../../images/index_bimg01.jpg">
+            <div data-thumb="../images/slides/thumbs/bridge.jpg" data-src="../images/slides/bridge.jpg">
             </div>
-            <div data-thumb="../../images/index_bimg01.jpg" data-src="../../images/index_bimg01.jpg">
+            <div data-thumb="../images/slides/thumbs/leaf.jpg" data-src="../images/slides/leaf.jpg">
             </div>
-        </div>
-    </div>
+            <div data-thumb="../images/slides/thumbs/road.jpg" data-src="../images/slides/road.jpg">
+            </div>
+            <div data-thumb="../images/slides/thumbs/sea.jpg" data-src="../images/slides/sea.jpg">
+            </div>
+            <div data-thumb="../images/slides/thumbs/shelter.jpg" data-src="../images/slides/shelter.jpg">
+            </div>
+            <div data-thumb="../images/slides/thumbs/tree.jpg" data-src="../images/slides/tree.jpg">
+            </div>
+        </div><!-- #camera_wrap_3 -->
+
+    </div><!-- .fluid_container -->
+    
 </body> 
 </html>
