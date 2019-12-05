@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,52 +6,8 @@
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon" id="page_favionc2">
 <link rel="icon" href="favicon.png" type="image/x-icon" id="page_favionc">
 <link href="style.css" rel="stylesheet" type="text/css" />
-<link rel='stylesheet' id='camera-css'  href='Camera/css/camera.css' type='text/css' media='all'> 
-    <style>
-		#back_to_camera {
-			background: rgba(255,255,255,.9);
-			clear: both;
-			display: block;
-			height: 40px;
-			line-height: 40px;
-			padding: 20px;
-			z-index: 1;
-		}
-		.fluid_container {
-			bottom: 0;
-			height: 100%;
-			left: 0;
-			right: 0;
-			top: 0;
-			z-index: 0;
-		}
-		#camera_wrap_4 {
-			bottom: 0;
-			height: 100%;
-			left: 0;
-			margin-bottom: 0!important;
-			right: 0;
-			top: 0;
-		}
-		.camera_bar {
-			z-index: 2;
-		}
-		.camera_thumbs {
-			margin-top: -100px;
-			z-index: 1;
-		}
-		.camera_thumbs_cont {
-			border-radius: 0;
-			-moz-border-radius: 0;
-			-webkit-border-radius: 0;
-		}
-		.camera_overlayer {
-			opacity: .1;
-		}
-	.main_bg .main_bg2 .main_bg3 .size .main_text .content.mCustomScrollbar h3 {
-	text-align: center;
-}
-    </style>
+<link rel="stylesheet" id="camera-css" href="Camera/css/camera.css" type="text/css" media="all"> 
+    
 
     <!--///////////////////////////////////////////////////////////////////////////////////////////////////
     //
@@ -59,30 +15,13 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////////////////--> 
     
-    <script type='text/javascript' src='Camera/scripts/jquery.min.js'></script>
-    <script type='text/javascript' src='Camera/scripts/jquery.mobile.customized.min.js'></script>
-    <script type='text/javascript' src='Camera/scripts/jquery.easing.1.3.js'></script> 
-    <script type='text/javascript' src='Camera/scripts/camera.min.js'></script> 
-    
-    <script>
-		jQuery(function(){
-			
-			jQuery('#camera_wrap_4').camera({
-				height: '1056',
-				loader: 'bar',
-				pagination: false,
-				thumbnails: false,
-				hover: false,
-				opacityOnGrid: false,
-				imagePath: '../images/'
-			});
+    <script type='text/javascript' src="Camera/scripts/jquery.min.js"></script>
+    <script type='text/javascript' src="Camera/scripts/jquery.mobile.customized.min.js"></script>
+    <script type='text/javascript' src="Camera/scripts/jquery.easing.1.3.js"></script> 
+    <script type='text/javascript' src="Camera/scripts/camera.min.js"></script> 
 
-		});
-	</script>
-    
-    
 	<!-- stylesheet for demo and examples -->
-	<link rel="stylesheet" href="scrollbar/examples/style.css">
+	<!--<link rel="stylesheet" href="scrollbar/examples/style.css">-->
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -97,31 +36,7 @@
 	
 	<!-- custom scrollbar plugin -->
 	<script src="scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	
-	<script>
-		(function($){
-			$(window).on("load",function(){
-				
-				$("a[rel='load-content']").click(function(e){
-					e.preventDefault();
-					var url=$(this).attr("href");
-					$.get(url,function(data){
-						$(".content .mCSB_container").append(data); //load new content inside .mCSB_container
-						//scroll-to appended content 
-						$(".content").mCustomScrollbar("scrollTo","h2:last");
-					});
-				});
-				
-				$(".content").delegate("a[href='top']","click",function(e){
-					e.preventDefault();
-					$(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
-				});
-				
-			});
-		})(jQuery);
-	</script>
-    
-    
+
     <!-- Add mousewheel plugin (this is optional) -->
 	<script type="text/javascript" src="fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
@@ -140,315 +55,411 @@
 	<!-- Add Media helper (this is optional) -->
 	<script type="text/javascript" src="fancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			 *  Simple image gallery. Uses default settings
-			 */
+    <style>
+        #back_to_camera {
+            background: rgba(255,255,255,.9);
+            clear: both;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            padding: 20px;
+            z-index: 1;
+        }
 
-			$('.fancybox').fancybox();
+        .fluid_container {
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 0;
+        }
 
-			/*
-			 *  Different effects
-			 */
+        #camera_wrap_4 {
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            margin-bottom: 0 !important;
+            right: 0;
+            top: 0;
+        }
 
-			// Change title type, overlay closing speed
-			$(".fancybox-effects-a").fancybox({
-				helpers: {
-					title : {
-						type : 'outside'
-					},
-					overlay : {
-						speedOut : 0
-					}
-				}
-			});
+        .camera_bar {
+            z-index: 2;
+        }
 
-			// Disable opening and closing animations, change title type
-			$(".fancybox-effects-b").fancybox({
-				openEffect  : 'none',
-				closeEffect	: 'none',
+        .camera_thumbs {
+            margin-top: -100px;
+            z-index: 1;
+        }
 
-				helpers : {
-					title : {
-						type : 'over'
-					}
-				}
-			});
+        .camera_thumbs_cont {
+            border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+        }
 
-			// Set custom style, close if clicked, change title type and overlay color
-			$(".fancybox-effects-c").fancybox({
-				wrapCSS    : 'fancybox-custom',
-				closeClick : true,
+        .camera_overlayer {
+            opacity: .1;
+        }
 
-				openEffect : 'none',
-
-				helpers : {
-					title : {
-						type : 'inside'
-					},
-					overlay : {
-						css : {
-							'background' : 'rgba(238,238,238,0.85)'
-						}
-					}
-				}
-			});
-
-			// Remove padding, set opening and closing animations, close if clicked and disable overlay
-			$(".fancybox-effects-d").fancybox({
-				padding: 0,
-
-				openEffect : 'elastic',
-				openSpeed  : 150,
-
-				closeEffect : 'elastic',
-				closeSpeed  : 150,
-
-				closeClick : true,
-
-				helpers : {
-					overlay : null
-				}
-			});
-
-			/*
-			 *  Button helper. Disable animations, hide close button, change title type and content
-			 */
-
-			$('.fancybox-buttons').fancybox({
-				openEffect  : 'none',
-				closeEffect : 'none',
-
-				prevEffect : 'none',
-				nextEffect : 'none',
-
-				closeBtn  : false,
-
-				helpers : {
-					title : {
-						type : 'inside'
-					},
-					buttons	: {}
-				},
-
-				afterLoad : function() {
-					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
-				}
-			});
-
-
-			/*
-			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
-			 */
-
-			$('.fancybox-thumbs').fancybox({
-				prevEffect : 'none',
-				nextEffect : 'none',
-
-				closeBtn  : false,
-				arrows    : false,
-				nextClick : true,
-
-				helpers : {
-					thumbs : {
-						width  : 50,
-						height : 50
-					}
-				}
-			});
-
-			/*
-			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
-			*/
-			$('.fancybox-media')
-				.attr('rel', 'media-gallery')
-				.fancybox({
-					openEffect : 'none',
-					closeEffect : 'none',
-					prevEffect : 'none',
-					nextEffect : 'none',
-
-					arrows : false,
-					helpers : {
-						media : {},
-						buttons : {}
-					}
-				});
-
-			/*
-			 *  Open manually
-			 */
-
-			$("#fancybox-manual-a").click(function() {
-				$.fancybox.open('1_b.jpg');
-			});
-
-			$("#fancybox-manual-b").click(function() {
-				$.fancybox.open({
-					href : 'iframe.html',
-					type : 'iframe',
-					padding : 5
-				});
-			});
-
-			$("#fancybox-manual-c").click(function() {
-				$.fancybox.open([
-					{
-						href : '1_b.jpg',
-						title : 'My title'
-					}, {
-						href : '2_b.jpg',
-						title : '2nd title'
-					}, {
-						href : '3_b.jpg'
-					}
-				], {
-					helpers : {
-						thumbs : {
-							width: 75,
-							height: 50
-						}
-					}
-				});
-			});
-
-
-		});
-	</script>
-	<style type="text/css">
-		.fancybox-custom .fancybox-skin {
+        .main_bg .main_bg2 .main_bg3 .size .main_text .content.mCustomScrollbar h3 {
+            text-align: center;
+        }
+        .fancybox-custom .fancybox-skin {
 			box-shadow: 0 0 50px #222;
 		}
-	</style>
-<script type="text/javascript">
-
-$(function(){
-	$('.dropdown').mouseenter(function(){
-		$('.sublinks').stop(false, true).hide();
-	
-		var submenu = $(this).parent().next();
-
-		submenu.css({
-			position:'absolute',
-			top: $(this).offset().top + $(this).height() + 'px',
-			left: $(this).offset().left + 'px',
-			zIndex:1000
-		});
-		
-		submenu.stop().slideDown(300);
-		
-		submenu.mouseleave(function(){
-			$(this).slideUp(300);
-		});
-	});
-});
-</script>
+    </style>
 </head>
 
 <body>
-<div class="c_line"></div>
-<div class="up">
-	<div class="top_bg">
-    	<div class="size">
-        	<div class="right" style=" margin-top:7px; line-height:0;"><a href="http://funtour7520.pixnet.net/blog/category/11290714" target="_blank"><img src="images/ico03.png"></a> <a href="mailto:Funtour7520@gmail.com"><img src="images/ico02.png"></a> <a href="https://www.facebook.com/funtravel0909/?fref=ts" target="_blank"><img src="images/ico01.png"></a> </div>
-        <a href="index.html">Home</a> │ 心喬旅行社—Fun心玩．旅遊趣 </div>
-    </div>
-	<div class="size">
-	  <div class="menu">
-      	<ul>
-        	<li class="a01 main"><a href="01_about.html" class="dropdown" style=" position:absolute; width:111px; height:98px; margin-left:-25px; margin-top:-25px;"></a>
-            	關於我們<br><font color="#e71974" size="2">About</font>
-            	<li class="sublinks">
-					<a href="01_about.html">關於我們</a>
-					<a href="01_about2.html">服務項目</a>
-					<a href="01_about3.html">領隊陣容</a>
-	  			</li>
-            </li>
-            <li class="a02 main"><a href="02_groups.html" class="dropdown" style=" position:absolute; width:127px; height:98px; margin-left:-25px; margin-top:-25px;"></a>
-            	團體旅遊<br><font color="#e71974" size="2">Groups</font>
-            	<li class="sublinks">
-					<a href="02_groups.html">國內旅遊</a>
-					<a href="02_groups2.html">國外旅遊</a>
-	  			</li>
-            </li>
-            <a href="03_travel.html"><li class="a03 main">玩家精選<br><font color="#e71974" size="2">Travel</font></li></a>
-            <a href="04_pet.html"><li class="a04 main">寵物旅遊<br><font color="#e71974" size="2">Pet Fun</font></li></a>
-            <a href="contact.html"><li class="a05 main">量身定做<br><font color="#e71974" size="2">Contact</font></li></a>
-            <a href="https://www.facebook.com/funtravel0909/?fref=ts" target="_blank"><li class="a06 main">最新消息<br><font color="#e71974" size="2">News</font></li></a>
-            <li class="end main"></li>
-            <div class="clear"></div>
-        </ul>
-      </div>
-	  <div class="logo"><a href="index.html"><img src="images/logo.jpg"></a></div>
-	</div>
-</div>
-
-<div class="main_bg"><div class="main_bg2-2"><div class="main_bg3">
-	<div class="size">
-	    <div class="main_text">
-        	<h2><div class="right"><a href="index.html">首頁</a> > 國內旅遊</div>
-   	      國內旅遊 - Domestic Groups</h2>
-            <div class="content mCustomScrollbar">
-			  <img src="images/photo/in/04.jpg" width="750" />
-              <h3>心喬的與眾不同，在於堅持「量身訂做」!</h3>
-<p>專業的服務精神、優良的旅遊品質、熱情的工作態度，堅持&quot;用心打造全新的旅遊環境&quot;作為自我期許及標準!</p>
-<p>  對於企業而言，適時安排一場成功的旅遊，有助於增進同事間情感，同時提高向心力，進而增加公司的整體競爭力；對於學校團體而言，一場成功的旅遊，除了完善的行程安排、過程富含趣味性之外，還須為學子們作好安全把關、在遊戲中學習團隊生活及激發創意，締造學習過程中的美好回憶。 </p>
-<p><font color="#0066CC">針對不同公司行號及學校團體的旅遊需求與目的，量身打造高CP值的旅遊行程，這是心喬能持續獲得好評的最佳優勢，因為「我們給的就是比別人多一點!」 </font></p>
-              <ul>
-                <li>心喬獨特的客製化服務，行程絕不走馬看花；遊覽車上以熱情洋溢的團康活動取代「欣賞國道風光」，<font color="#0066CC">從「出發」到「賦歸」都是豐富精彩的旅遊回憶。 </font></li>
-                <li>每位旅客均<font color="#0066CC">至少加保平安險200萬附加20萬醫療</font>，讓旅遊更有保障！ </li>
-                <li>乾淨清潔、舒適衛生的住宿環境和膳食用餐，讓旅程更加安心、放心；遊覽車上並提供礦泉水無限暢飲。 </li>
-                <li>領隊人員，皆為<font color="#0066CC">定期培訓之專業領隊</font>，擁有豐富帶團經驗，服務熱心、親切負責，富有愛心、耐心、細心；特殊旅遊行程並依需求隨團安排專業護理師，讓旅程無後顧之憂。 </li>
-                <li>所有車輛均為檢驗合格定期保養之高級氣墊遊覽車，備有優質影音設備，並投保旅客乘客險。隨車附車籍資料、行照、駕照，配有合格安全設施(滅火器、擊破器、安全門等)，以及簡易醫藥箱，並於每次旅遊出發前完成行車前安全檢查。 </li>
-                <li>司機素質優良親切，車輛行進中不喝酒、抽菸、嚼檳榔。 </li>
-                <li>旅客獲贈出團手冊及精美旅遊紀念VCD一份，讓回憶不褪色。 </li>
-                <li>其他客製化之服務，依各團體需求適度調整，以求顧客最大的滿意度。 </li>
-                <li>除了公司及學校團體外，心喬特別開發「<font color="#0066CC">陽光旅遊團</font>」說走就走，團友只需要帶著輕鬆的心情，跟著陽光走，跟著心喬走~<font color="#0066CC">Fun 心玩世界</font>。</li>
-              </ul>
-              <p><img src="images/photo/in/02.jpg" width="750" />              </p>
-              <p><img src="images/photo/in/03.jpg" width="750" /></p>
-              <p>
-                <img src="images/photo/in/01.jpg" width="750" /></p>
+    <div class="c_line"></div>
+    <div class="up">
+        <div class="top_bg">
+            <div class="size">
+                <div class="right" style=" margin-top:7px; line-height:0;"><a href="http://funtour7520.pixnet.net/blog/category/11290714" target="_blank"><img src="images/ico03.png" /></a> <a href="mailto:Funtour7520@gmail.com"><img src="images/ico02.png" /></a> <a href="https://www.facebook.com/funtravel0909/?fref=ts" target="_blank"><img src="images/ico01.png" /></a> </div>
+                <a href="index.html">Home</a> │ 心喬旅行社—Fun心玩．旅遊趣
             </div>
         </div>
-        <div class="left_menu">
-        	<ul>
-            	<a href="02_groups.html">
-            	<li class="this">國內團體</li></a>
-                <a href="02_groups2.html">
-                <li >國外團體</li></a>
-            </ul>
-        </div>
-    </div></div>  
-</div> </div> 
-
-<div class="down">
-	<div class="down_bg">
-    	<div class="size">
-        	<ul>
-                <a href="http://funtour7520.pixnet.net/album" target="_blank" ><li><img src="images/photo/s01.jpg"></li></a>
-                <a href="http://funtour7520.pixnet.net/blog/category/864156" target="_blank" ><li><img src="images/photo/s02.jpg"></li></a>
-                <a href="http://funtour7520.pixnet.net/blog/category/864144" target="_blank" ><li><img src="images/photo/s03.jpg"></li></a>
-                <a href="https://www.facebook.com/puppybabypudding/?fref=ts" ><li><img src="images/photo/s04.jpg"></li></a>
-                <div class="clear"></div>
-            </ul>
+        <div class="size">
+            <div class="menu">
+                <ul>
+                    <li class="a01 main">
+                        <a href="01_about.html" class="dropdown" style=" position:absolute; width:111px; height:98px; margin-left:-25px; margin-top:-25px;"></a>
+                        關於我們<br /><font color="#e71974" size="2">About</font>
+                    </li>
+                    <li class="sublinks">
+                        <a href="01_about.html">關於我們</a>
+                        <a href="01_about2.html">服務項目</a>
+                        <a href="01_about3.html">領隊陣容</a>
+                    </li>
+                    </li>
+                    <li class="a02 main">
+                        <a href="02_groups.html" class="dropdown" style=" position:absolute; width:127px; height:98px; margin-left:-25px; margin-top:-25px;"></a>
+                        團體旅遊<br /><font color="#e71974" size="2">Groups</font>
+                    </li>
+                    <li class="sublinks">
+                        <a href="02_groups.html">國內旅遊</a>
+                        <a href="02_groups2.html">國外旅遊</a>
+                    </li>
+                    </li>
+                    <a href="03_travel.html"><li class="a03 main">玩家精選<br /><font color="#e71974" size="2">Travel</font></li></a>
+                    <a href="04_pet.html"><li class="a04 main">寵物旅遊<br /><font color="#e71974" size="2">Pet Fun</font></li></a>
+                    <a href="contact.html"><li class="a05 main">量身定做<br /><font color="#e71974" size="2">Contact</font></li></a>
+                    <a href="https://www.facebook.com/funtravel0909/?fref=ts" target="_blank"><li class="a06 main">最新消息<br /><font color="#e71974" size="2">News</font></li></a>
+                    <li class="end main"></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="logo"><a href="index.html"><img src="images/logo.jpg" /></a></div>
         </div>
     </div>
-	<div class="copyright">
-	  <div class="size">
-	    <div class="right">
-	      <p>嘉義總公司: 
-	        電話:（05）2351873 
-	        傳真:（05）2366330<br />
-	        台北聯絡辦事處: 
-	        電話:（02）25866600 
-	        傳真:（02）25863009 
-	        台北市中山區雙城街23巷2號11樓 </p>
+
+    <div class="main_bg">
+        <div class="main_bg2-2">
+            <div class="main_bg3">
+                <div class="size">
+                    <div class="main_text">
+                        <h2>
+                            <div class="right"><a href="index.html">首頁</a> > 國內旅遊</div>
+                            國內旅遊 - Domestic Groups
+                        </h2>
+                        <div class="content mCustomScrollbar">
+                            <img src="images/photo/in/04.jpg" width="750" />
+                            <h3>心喬的與眾不同，在於堅持「量身訂做」!</h3>
+                            <p>專業的服務精神、優良的旅遊品質、熱情的工作態度，堅持&quot;用心打造全新的旅遊環境&quot;作為自我期許及標準!</p>
+                            <p>  對於企業而言，適時安排一場成功的旅遊，有助於增進同事間情感，同時提高向心力，進而增加公司的整體競爭力；對於學校團體而言，一場成功的旅遊，除了完善的行程安排、過程富含趣味性之外，還須為學子們作好安全把關、在遊戲中學習團隊生活及激發創意，締造學習過程中的美好回憶。 </p>
+                            <p><font color="#0066CC">針對不同公司行號及學校團體的旅遊需求與目的，量身打造高CP值的旅遊行程，這是心喬能持續獲得好評的最佳優勢，因為「我們給的就是比別人多一點!」 </font></p>
+                            <ul>
+                                <li>心喬獨特的客製化服務，行程絕不走馬看花；遊覽車上以熱情洋溢的團康活動取代「欣賞國道風光」，<font color="#0066CC">從「出發」到「賦歸」都是豐富精彩的旅遊回憶。 </font></li>
+                                <li>每位旅客均<font color="#0066CC">至少加保平安險200萬附加20萬醫療</font>，讓旅遊更有保障！ </li>
+                                <li>乾淨清潔、舒適衛生的住宿環境和膳食用餐，讓旅程更加安心、放心；遊覽車上並提供礦泉水無限暢飲。 </li>
+                                <li>領隊人員，皆為<font color="#0066CC">定期培訓之專業領隊</font>，擁有豐富帶團經驗，服務熱心、親切負責，富有愛心、耐心、細心；特殊旅遊行程並依需求隨團安排專業護理師，讓旅程無後顧之憂。 </li>
+                                <li>所有車輛均為檢驗合格定期保養之高級氣墊遊覽車，備有優質影音設備，並投保旅客乘客險。隨車附車籍資料、行照、駕照，配有合格安全設施(滅火器、擊破器、安全門等)，以及簡易醫藥箱，並於每次旅遊出發前完成行車前安全檢查。 </li>
+                                <li>司機素質優良親切，車輛行進中不喝酒、抽菸、嚼檳榔。 </li>
+                                <li>旅客獲贈出團手冊及精美旅遊紀念VCD一份，讓回憶不褪色。 </li>
+                                <li>其他客製化之服務，依各團體需求適度調整，以求顧客最大的滿意度。 </li>
+                                <li>除了公司及學校團體外，心喬特別開發「<font color="#0066CC">陽光旅遊團</font>」說走就走，團友只需要帶著輕鬆的心情，跟著陽光走，跟著心喬走~<font color="#0066CC">Fun 心玩世界</font>。</li>
+                            </ul>
+                            <p><img src="images/photo/in/02.jpg" width="750" />              </p>
+                            <p><img src="images/photo/in/03.jpg" width="750" /></p>
+                            <p>
+                                <img src="images/photo/in/01.jpg" width="750" />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="left_menu">
+                        <ul>
+                            <a href="02_groups.html">
+                                <li class="this">國內團體</li>
+                            </a>
+                            <a href="02_groups2.html">
+                                <li>國外團體</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-	    <p>Copyright © 2016 心喬旅行社 All Rights Reserved.</p>
-      </div>
-  </div>
-</div>
+    </div>
+
+    <div class="down">
+        <div class="down_bg">
+            <div class="size">
+                <ul>
+                    <a href="http://funtour7520.pixnet.net/album" target="_blank"><li><img src="images/photo/s01.jpg" /></li></a>
+                    <a href="http://funtour7520.pixnet.net/blog/category/864156" target="_blank"><li><img src="images/photo/s02.jpg" /></li></a>
+                    <a href="http://funtour7520.pixnet.net/blog/category/864144" target="_blank"><li><img src="images/photo/s03.jpg" /></li></a>
+                    <a href="https://www.facebook.com/puppybabypudding/?fref=ts"><li><img src="images/photo/s04.jpg" /></li></a>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="size">
+                <div class="right">
+                    <p>
+                        嘉義總公司:
+                        電話:（05）2351873
+                        傳真:（05）2366330<br />
+                        台北聯絡辦事處:
+                        電話:（02）25866600
+                        傳真:（02）25863009
+                        台北市中山區雙城街23巷2號11樓
+                    </p>
+                </div>
+                <p>Copyright © 2016 心喬旅行社 All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#camera_wrap_4').camera({
+                height: '1056',
+                loader: 'bar',
+                pagination: false,
+                thumbnails: false,
+                hover: false,
+                opacityOnGrid: false,
+                imagePath: '../images/'
+            });
+
+            $(window).on("load", function () {
+                $("a[rel='load-content']").click(function (e) {
+                    e.preventDefault();
+                    var url = $(this).attr("href");
+                    $.get(url, function (data) {
+                        $(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+                        //scroll-to appended content
+                        $(".content").mCustomScrollbar("scrollTo", "h2:last");
+                    });
+                });
+
+                $(".content").delegate("a[href='top']", "click", function (e) {
+                    e.preventDefault();
+                    $(".content").mCustomScrollbar("scrollTo", $(this).attr("href"));
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+             *  Simple image gallery. Uses default settings
+             */
+
+            $('.fancybox').fancybox();
+
+            /*
+             *  Different effects
+             */
+
+            // Change title type, overlay closing speed
+            $(".fancybox-effects-a").fancybox({
+                helpers: {
+                    title: {
+                        type: 'outside'
+                    },
+                    overlay: {
+                        speedOut: 0
+                    }
+                }
+            });
+
+            // Disable opening and closing animations, change title type
+            $(".fancybox-effects-b").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+
+                helpers: {
+                    title: {
+                        type: 'over'
+                    }
+                }
+            });
+
+            // Set custom style, close if clicked, change title type and overlay color
+            $(".fancybox-effects-c").fancybox({
+                wrapCSS: 'fancybox-custom',
+                closeClick: true,
+
+                openEffect: 'none',
+
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    overlay: {
+                        css: {
+                            'background': 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+
+            // Remove padding, set opening and closing animations, close if clicked and disable overlay
+            $(".fancybox-effects-d").fancybox({
+                padding: 0,
+
+                openEffect: 'elastic',
+                openSpeed: 150,
+
+                closeEffect: 'elastic',
+                closeSpeed: 150,
+
+                closeClick: true,
+
+                helpers: {
+                    overlay: null
+                }
+            });
+
+            /*
+             *  Button helper. Disable animations, hide close button, change title type and content
+             */
+
+            $('.fancybox-buttons').fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+
+                prevEffect: 'none',
+                nextEffect: 'none',
+
+                closeBtn: false,
+
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    buttons: {}
+                },
+
+                afterLoad: function () {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+
+
+            /*
+             *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+             */
+
+            $('.fancybox-thumbs').fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+
+                closeBtn: false,
+                arrows: false,
+                nextClick: true,
+
+                helpers: {
+                    thumbs: {
+                        width: 50,
+                        height: 50
+                    }
+                }
+            });
+
+            /*
+             *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+            */
+            $('.fancybox-media')
+                .attr('rel', 'media-gallery')
+                .fancybox({
+                    openEffect: 'none',
+                    closeEffect: 'none',
+                    prevEffect: 'none',
+                    nextEffect: 'none',
+
+                    arrows: false,
+                    helpers: {
+                        media: {},
+                        buttons: {}
+                    }
+                });
+
+            /*
+             *  Open manually
+             */
+
+            $("#fancybox-manual-a").click(function () {
+                $.fancybox.open('1_b.jpg');
+            });
+
+            $("#fancybox-manual-b").click(function () {
+                $.fancybox.open({
+                    href: 'iframe.html',
+                    type: 'iframe',
+                    padding: 5
+                });
+            });
+
+            $("#fancybox-manual-c").click(function () {
+                $.fancybox.open([
+                    {
+                        href: '1_b.jpg',
+                        title: 'My title'
+                    }, {
+                        href: '2_b.jpg',
+                        title: '2nd title'
+                    }, {
+                        href: '3_b.jpg'
+                    }
+                ], {
+                        helpers: {
+                            thumbs: {
+                                width: 75,
+                                height: 50
+                            }
+                        }
+                    });
+            });
+
+
+        });
+    </script>
+    <script type="text/javascript">
+
+        $(function () {
+            $('.dropdown').mouseenter(function () {
+                $('.sublinks').stop(false, true).hide();
+
+                var submenu = $(this).parent().next();
+
+                submenu.css({
+                    position: 'absolute',
+                    top: $(this).offset().top + $(this).height() + 'px',
+                    left: $(this).offset().left + 'px',
+                    zIndex: 1000
+                });
+
+                submenu.stop().slideDown(300);
+
+                submenu.mouseleave(function () {
+                    $(this).slideUp(300);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
