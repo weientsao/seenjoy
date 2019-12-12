@@ -383,212 +383,252 @@ $(function(){
 	</div>
 </div>
 
-<div class="main_bg"><div class="main_bg2-4"><div class="main_bg3">
-	<div class="size">
-	    <div class="main_text">
-        	<h2><div class="right"><a href="index.html">首頁</a> > 聯絡我們</div>
-       	      聯絡我們 - Contact Us</h2>
-          <div class="content mCustomScrollbar">
-              <FORM onSubmit="return validate()" action="mail.php" method="post">
-			    <h3>聯絡資訊</h3>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="80" align="right">聯絡人<font color="#FF0000"> ※</font></td>
-                    <td><label for="company"></label>
-                    <input type="text" name="cname" id="cname" /></td>
-                    <td width="65" align="right">E-mail<font color="#FF0000"> ※</font></td>
-                    <td><input type="text" name="cmail" id="cmail" /></td>
-                  </tr>
-                  <tr>
-                    <td align="right">公司名稱</td>
-                    <td><input type="text" name="company" id="company" /></td>
-                    <td align="right">單位部門</td>
-                    <td><input type="text" name="ckind" id="ckind" /></td>
-                  </tr>
-                  <tr>
-                    <td align="right">聯絡電話 <font color="#FF0000">※</font></td>
-                    <td><input type="text" name="ctel" id="ctel" /></td>
-                    <td align="right">分機</td>
-                    <td><input type="text" name="ctel2" id="ctel2" /></td>
-                  </tr>
-                  <tr>
-                    <td align="right">傳真</td>
-                    <td><input type="text" name="cfax" id="cfax" /></td>
-                    <td align="right">手機 <font color="#FF0000">※</font></td>
-                    <td><input type="text" name="cphone" id="cphone" /></td>
-                  </tr>
-                  <tr>
-                    <td colspan="4">方便聯絡時間<label>
-                        <input name="time" type="radio" id="RadioGroup1_0" value="9:00~12:00" checked="checked" />
-                        9:00~12:00</label>
-                      <label>
-                        <input type="radio" name="time" value="14:00~18:00" id="RadioGroup1_1" />
-                      14:00~18:00</label>
-                      <label>
-                      <input type="radio" name="time" value="18:00~21:00" id="RadioGroup1_1" />
-                      18:00~21:00</label>
-                      <br />
-                    </td>
-                  </tr>
-                </table>
-                <h3>旅遊需求</h3>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="80" rowspan="2" align="right">旅遊地點 <font color="#FF0000">※</font></td>
-                    <td colspan="3"><label>
-                      <input name="addr0" type="radio" id="RadioGroup2_1" value="國內" checked="checked" />
-                      國內</label>
-                      <label>
-                        <input type="radio" name="addr0" value="國外" id="RadioGroup2_2" />
-                        國外</label></td>
-                  </tr>
-                  <tr>
-                    <td colspan="3"><input type="text" name="addr" id="addr" />
-                      <br />
-                    計畫旅遊城市或景區，可詳述</td>
-                  </tr>
-                  <tr>
-                    <td align="right">出發地 <font color="#FF0000">※</font></td>
-                    <td><label for="taiwan"></label>
-                      <select name="taiwan" id="taiwan">
-                        <option value="台北縣" selected="selected">新北市</option>
-                        <option value="基隆市">基隆市</option>
-                        <option value="台北市">台北市</option>
-                        <option value="桃園縣">桃園縣</option>
-                        <option value="宜蘭縣">宜蘭縣</option>
-                        <option value="新竹縣">新竹縣</option>
-                        <option value="新竹市">新竹市</option>
-                        <option value="苗栗縣">苗栗縣</option>
-                        <option value="台中縣">台中縣</option>
-                        <option value="花蓮縣">花蓮縣</option>
-                        <option value="南投縣">南投縣</option>
-                        <option value="台中市">台中市</option>
-                        <option value="彰化縣">彰化縣</option>
-                        <option value="雲林縣">雲林縣</option>
-                        <option value="嘉義縣">嘉義縣</option>
-                        <option value="嘉義市">嘉義市</option>
-                        <option value="高雄縣">高雄縣</option>
-                        <option value="台東縣">台東縣</option>
-                        <option value="台南縣">台南縣</option>
-                        <option value="台南市">台南市</option>
-                        <option value="屏東縣">屏東縣</option>
-                        <option value="高雄市">高雄市</option>
-                    </select></td>
-                    <td width="80">旅遊型態 <font color="#FF0000">※</font></td>
-                    <td><select name="type" id="type">
-                      <option value="員工旅遊" selected="selected">員工旅遊</option>
-                      <option value="家族旅遊">家族旅遊</option>
-                      <option value="畢業旅行">畢業旅行</option>
-                      <option value="其它">其它</option>
-                    </select></td>
-                  </tr>
-                  <tr>
-                    <td align="right">出發時間 <font color="#FF0000">※</font></td>
-                    <td><select name="year" id="year">
-                      <option value="2016" selected="selected">2016</option>
-                      <option value="2017">2017</option>
-                      <option value="2018">2018</option>
-                      <option value="2019">2019</option>
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
-                    </select>
-                      年
-                      <select name="mon" id="mon">
-                        <option value="01" selected="selected">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                      </select>
-                      月
-                      <select name="day" id="day">
-                        <option value="01" selected="selected">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                      </select>
-                    日</td>
-                    <td>預計天數<font color="#FF0000">※</font></td>
-                    <td><input type="text" name="goday" id="goday" style=" width:20px;"/>
-                    天</td>
-                  </tr>
-                  <tr>
-                    <td align="right">參加人數 <font color="#FF0000">※</font></td>
-                    <td><input type="text" name="peo" id="peo" style=" width:20px;"/>
-                    人</td>
-                    <td>旅遊預算 <font color="#FF0000">※</font></td>
-                    <td><input type="text" name="money" id="money" style=" width:50px;"/>
-                    ~
-                    <input type="text" name="money2" id="money2" style=" width:50px;"/>
-                    元</td>
-                  </tr>
-                  <tr>
-                    <td align="right">其它需求</td>
-                    <td colspan="3"><label for="info"></label>
-                    其它特殊需求，可詳述(將依您的旅遊需求及預算，為您規劃合適行程)                    <textarea name="info" id="info" cols="45" rows="5">例如:特定景點、年齡層、是否安排遊樂園區、親子行程、交通方式(如火車、高鐵)...等</textarea></td>
-                  </tr>
-                </table>
-                <div class="btn">感謝您的耐心填寫，我們將儘快由專人與您聯繫<br />
-<input type="submit" name="button" id="button" value="送出" />
-			    <input type="reset" name="button2" id="button2" value="重設" />
-                </div>
-			  </form>
-			  <h3>台北聯絡辦事處: </h3>
-              <img src="images/qrcode.jpg" style=" float:right; margin-top:40px;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;">
-              <ul><li>【電話】（02）25566680 </li>
-				  <li>                【傳真】（02）25566500</li>
-                <li>                【email】<a href="mailto:Funtour7520@gmail.com">Funtour7520@gmail.com</a></li>
-                <li>                【line ID】funtour7520</li>
-                <li>                【FB臉書私訊】              <a href="https://www.facebook.com/funtravel0909/info/?tab=overview" target="_blank">請點我</a></li>
-            </ul>
-            <h3>嘉義總公司: </h3>
-            <ul><li>【電話】（05）2351873</li>
-              <li>                  【傳真】（05）2366330 </li>
-            </ul>
-            </div>
-        </div>
-        <div class="left_menu">
-        </div>
-    </div></div>  
-</div> </div> 
+<div class="main_bg">
+	
+	<div class="main_bg2-4">
+		
+		<div class="main_bg3">
+			<div class="size">
+				<div class="main_text">
+					<h2>
+						<div class="right"><a href="index.html">首頁</a> > 聯絡我們</div>
+						聯絡我們 - Contact Us
+					</h2>
+
+					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdV_c4aV92unZ8ItU-niymfTBYE87SNOhIG-dvHg6L0dD_HOw/viewform?embedded=true" width="780" height="530" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+
+					<!--<div class="content mCustomScrollbar">
+						<FORM onSubmit="return validate()" action="mail.php" method="post">
+							<h3>聯絡資訊</h3>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="80" align="right">聯絡人<font color="#FF0000"> ※</font></td>
+									<td>
+										<label for="company"></label>
+										<input type="text" name="cname" id="cname" />
+									</td>
+									<td width="65" align="right">E-mail<font color="#FF0000"> ※</font></td>
+									<td><input type="text" name="cmail" id="cmail" /></td>
+								</tr>
+								<tr>
+									<td align="right">公司名稱</td>
+									<td><input type="text" name="company" id="company" /></td>
+									<td align="right">單位部門</td>
+									<td><input type="text" name="ckind" id="ckind" /></td>
+								</tr>
+								<tr>
+									<td align="right">聯絡電話 <font color="#FF0000">※</font></td>
+									<td><input type="text" name="ctel" id="ctel" /></td>
+									<td align="right">分機</td>
+									<td><input type="text" name="ctel2" id="ctel2" /></td>
+								</tr>
+								<tr>
+									<td align="right">傳真</td>
+									<td><input type="text" name="cfax" id="cfax" /></td>
+									<td align="right">手機 <font color="#FF0000">※</font></td>
+									<td><input type="text" name="cphone" id="cphone" /></td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										方便聯絡時間<label>
+											<input name="time" type="radio" id="RadioGroup1_0" value="9:00~12:00" checked="checked" />
+											9:00~12:00
+										</label>
+										<label>
+											<input type="radio" name="time" value="14:00~18:00" id="RadioGroup1_1" />
+											14:00~18:00
+										</label>
+										<label>
+											<input type="radio" name="time" value="18:00~21:00" id="RadioGroup1_1" />
+											18:00~21:00
+										</label>
+										<br />
+									</td>
+								</tr>
+							</table>
+							<h3>旅遊需求</h3>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="80" rowspan="2" align="right">旅遊地點 <font color="#FF0000">※</font></td>
+									<td colspan="3">
+										<label>
+											<input name="addr0" type="radio" id="RadioGroup2_1" value="國內" checked="checked" />
+											國內
+										</label>
+										<label>
+											<input type="radio" name="addr0" value="國外" id="RadioGroup2_2" />
+											國外
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<input type="text" name="addr" id="addr" />
+										<br />
+										計畫旅遊城市或景區，可詳述
+									</td>
+								</tr>
+								<tr>
+									<td align="right">出發地 <font color="#FF0000">※</font></td>
+									<td>
+										<label for="taiwan"></label>
+										<select name="taiwan" id="taiwan">
+											<option value="台北縣" selected="selected">新北市</option>
+											<option value="基隆市">基隆市</option>
+											<option value="台北市">台北市</option>
+											<option value="桃園縣">桃園縣</option>
+											<option value="宜蘭縣">宜蘭縣</option>
+											<option value="新竹縣">新竹縣</option>
+											<option value="新竹市">新竹市</option>
+											<option value="苗栗縣">苗栗縣</option>
+											<option value="台中縣">台中縣</option>
+											<option value="花蓮縣">花蓮縣</option>
+											<option value="南投縣">南投縣</option>
+											<option value="台中市">台中市</option>
+											<option value="彰化縣">彰化縣</option>
+											<option value="雲林縣">雲林縣</option>
+											<option value="嘉義縣">嘉義縣</option>
+											<option value="嘉義市">嘉義市</option>
+											<option value="高雄縣">高雄縣</option>
+											<option value="台東縣">台東縣</option>
+											<option value="台南縣">台南縣</option>
+											<option value="台南市">台南市</option>
+											<option value="屏東縣">屏東縣</option>
+											<option value="高雄市">高雄市</option>
+										</select>
+									</td>
+									<td width="80">旅遊型態 <font color="#FF0000">※</font></td>
+									<td>
+										<select name="type" id="type">
+											<option value="員工旅遊" selected="selected">員工旅遊</option>
+											<option value="家族旅遊">家族旅遊</option>
+											<option value="畢業旅行">畢業旅行</option>
+											<option value="其它">其它</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td align="right">出發時間 <font color="#FF0000">※</font></td>
+									<td>
+										<select name="year" id="year">
+											<option value="2016" selected="selected">2016</option>
+											<option value="2017">2017</option>
+											<option value="2018">2018</option>
+											<option value="2019">2019</option>
+											<option value="2020">2020</option>
+											<option value="2021">2021</option>
+											<option value="2022">2022</option>
+											<option value="2023">2023</option>
+											<option value="2024">2024</option>
+											<option value="2025">2025</option>
+										</select>
+										年
+										<select name="mon" id="mon">
+											<option value="01" selected="selected">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>
+										月
+										<select name="day" id="day">
+											<option value="01" selected="selected">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+											<option value="23">23</option>
+											<option value="24">24</option>
+											<option value="25">25</option>
+											<option value="26">26</option>
+											<option value="27">27</option>
+											<option value="28">28</option>
+											<option value="29">29</option>
+											<option value="30">30</option>
+											<option value="31">31</option>
+										</select>
+										日
+									</td>
+									<td>預計天數<font color="#FF0000">※</font></td>
+									<td>
+										<input type="text" name="goday" id="goday" style=" width:20px;" />
+										天
+									</td>
+								</tr>
+								<tr>
+									<td align="right">參加人數 <font color="#FF0000">※</font></td>
+									<td>
+										<input type="text" name="peo" id="peo" style=" width:20px;" />
+										人
+									</td>
+									<td>旅遊預算 <font color="#FF0000">※</font></td>
+									<td>
+										<input type="text" name="money" id="money" style=" width:50px;" />
+										~
+										<input type="text" name="money2" id="money2" style=" width:50px;" />
+										元
+									</td>
+								</tr>
+								<tr>
+									<td align="right">其它需求</td>
+									<td colspan="3">
+										<label for="info"></label>
+										其它特殊需求，可詳述(將依您的旅遊需求及預算，為您規劃合適行程)                    <textarea name="info" id="info" cols="45" rows="5">例如:特定景點、年齡層、是否安排遊樂園區、親子行程、交通方式(如火車、高鐵)...等</textarea>
+									</td>
+								</tr>
+							</table>
+							<div class="btn">
+								感謝您的耐心填寫，我們將儘快由專人與您聯繫<br />
+								<input type="submit" name="button" id="button" value="送出" />
+								<input type="reset" name="button2" id="button2" value="重設" />
+							</div>
+						</FORM>
+						<h3>台北聯絡辦事處: </h3>
+						<img src="images/qrcode.jpg" style=" float:right; margin-top:40px;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;" />
+						<ul>
+							<li>【電話】（02）25566680 </li>
+							<li>                【傳真】（02）25566500</li>
+							<li>                【email】<a href="mailto:Funtour7520@gmail.com">Funtour7520@gmail.com</a></li>
+							<li>                【line ID】funtour7520</li>
+							<li>                【FB臉書私訊】              <a href="https://www.facebook.com/funtravel0909/info/?tab=overview" target="_blank">請點我</a></li>
+						</ul>
+						<h3>嘉義總公司: </h3>
+						<ul>
+							<li>【電話】（05）2351873</li>
+							<li>                  【傳真】（05）2366330 </li>
+						</ul>
+					</div>-->
+				</div>
+				<div class="left_menu">
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
 
 <div class="down">
 	<div class="down_bg">
